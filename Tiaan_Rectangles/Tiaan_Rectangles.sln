@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiaan_Rectangles", "Tiaan_Rectangles\Tiaan_Rectangles.csproj", "{62A5CADA-5992-4738-9EC5-5B6FCABB9D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangles.UnitTests", "Rectangles.UnitTests\Rectangles.UnitTests.csproj", "{1581D5F1-AFEB-4EBD-B12D-A0D815FD058F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62A5CADA-5992-4738-9EC5-5B6FCABB9D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62A5CADA-5992-4738-9EC5-5B6FCABB9D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62A5CADA-5992-4738-9EC5-5B6FCABB9D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62A5CADA-5992-4738-9EC5-5B6FCABB9D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1581D5F1-AFEB-4EBD-B12D-A0D815FD058F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1581D5F1-AFEB-4EBD-B12D-A0D815FD058F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1581D5F1-AFEB-4EBD-B12D-A0D815FD058F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1581D5F1-AFEB-4EBD-B12D-A0D815FD058F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2081F92A-21F4-46E7-9BBC-F6287590D320}
+	EndGlobalSection
+EndGlobal
