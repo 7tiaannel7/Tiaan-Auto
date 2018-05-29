@@ -24,7 +24,8 @@ namespace Tiaan_Rectangles
 
     private void button1_Click(object sender, EventArgs e)
     {
-
+      var amountOfRectangles = userInputNumericDropdown.Value;
+      AmountChosenlbl.Text = "You chose " + amountOfRectangles + " rectangles!";
     }
   }
 }

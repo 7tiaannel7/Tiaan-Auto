@@ -9,6 +9,13 @@ namespace Rectangles.UnitTests
     [TestMethod]
     public void InputRectangle_InputIsValid_AcceptsInput()
     {
+      // Arrange
+
+
+      // Act
+
+
+      // Assert
     }
   }
 }
