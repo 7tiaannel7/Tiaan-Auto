@@ -26,6 +26,7 @@ namespace Tiaan_Rectangles
     {
       var amountOfRectangles = userInputNumericDropdown.Value;
       AmountChosenlbl.Text = "You chose " + amountOfRectangles + " rectangles!";
+      AmountChosenlbl.Visible = true;
     }
   }
 }

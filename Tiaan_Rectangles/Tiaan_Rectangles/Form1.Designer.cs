@@ -110,9 +110,10 @@
       this.AmountChosenlbl.AutoSize = true;
       this.AmountChosenlbl.Location = new System.Drawing.Point(507, 101);
       this.AmountChosenlbl.Name = "AmountChosenlbl";
-      this.AmountChosenlbl.Size = new System.Drawing.Size(81, 13);
+      this.AmountChosenlbl.Size = new System.Drawing.Size(43, 13);
       this.AmountChosenlbl.TabIndex = 8;
-      this.AmountChosenlbl.Text = "Amount chosen";
+      this.AmountChosenlbl.Text = "Amount";
+      this.AmountChosenlbl.Visible = false;
       // 
       // Form1
       // 
@@ -127,7 +128,7 @@
       this.Controls.Add(this.groupBox1);
       this.Controls.Add(this.button1);
       this.Name = "Form1";
-      this.Text = "Form1";
+      this.Text = "Tiaan Nel - Rectangles";
       this.Load += new System.EventHandler(this.Form1_Load);
       ((System.ComponentModel.ISupportInitialize)(this.userInputNumericDropdown)).EndInit();
       this.ResumeLayout(false);
