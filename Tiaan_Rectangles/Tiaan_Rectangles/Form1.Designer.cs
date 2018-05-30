@@ -33,11 +33,8 @@
       this.UserInputNumericDropdown = new System.Windows.Forms.NumericUpDown();
       this.label2 = new System.Windows.Forms.Label();
       this.AmountChosenLabel = new System.Windows.Forms.Label();
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
-      this.pictureBox2 = new System.Windows.Forms.PictureBox();
+      this.canvas = new System.Windows.Forms.Panel();
       ((System.ComponentModel.ISupportInitialize)(this.UserInputNumericDropdown)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
       this.SuspendLayout();
       // 
       // GenerateButton
@@ -99,29 +96,20 @@
       this.AmountChosenLabel.Text = "Amount";
       this.AmountChosenLabel.Visible = false;
       // 
-      // pictureBox1
+      // canvas
       // 
-      this.pictureBox1.Location = new System.Drawing.Point(37, 191);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(400, 300);
-      this.pictureBox1.TabIndex = 9;
-      this.pictureBox1.TabStop = false;
-      // 
-      // pictureBox2
-      // 
-      this.pictureBox2.Location = new System.Drawing.Point(479, 191);
-      this.pictureBox2.Name = "pictureBox2";
-      this.pictureBox2.Size = new System.Drawing.Size(400, 300);
-      this.pictureBox2.TabIndex = 10;
-      this.pictureBox2.TabStop = false;
+      this.canvas.Location = new System.Drawing.Point(418, 152);
+      this.canvas.Name = "canvas";
+      this.canvas.Size = new System.Drawing.Size(531, 348);
+      this.canvas.TabIndex = 9;
+      this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.canvas_Paint);
       // 
       // MainApplication
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(1012, 580);
-      this.Controls.Add(this.pictureBox2);
-      this.Controls.Add(this.pictureBox1);
+      this.Controls.Add(this.canvas);
       this.Controls.Add(this.AmountChosenLabel);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.UserInputNumericDropdown);
@@ -131,8 +119,6 @@
       this.Text = "Tiaan Nel - Rectangles";
       this.Load += new System.EventHandler(this.Form1_Load);
       ((System.ComponentModel.ISupportInitialize)(this.UserInputNumericDropdown)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -145,8 +131,7 @@
     private System.Windows.Forms.NumericUpDown UserInputNumericDropdown;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label AmountChosenLabel;
-    private System.Windows.Forms.PictureBox pictureBox1;
-    private System.Windows.Forms.PictureBox pictureBox2;
+    private System.Windows.Forms.Panel canvas;
   }
 }
 
