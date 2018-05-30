@@ -2,9 +2,11 @@ C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\bin\Debug\Tiaan_Recta
 C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\bin\Debug\Tiaan_Rectangles.exe
 C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\bin\Debug\Tiaan_Rectangles.pdb
 C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\obj\Debug\Tiaan_Rectangles.csprojResolveAssemblyReference.cache
-C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\obj\Debug\Tiaan_Rectangles.Form1.resources
 C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\obj\Debug\Tiaan_Rectangles.Properties.Resources.resources
 C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\obj\Debug\Tiaan_Rectangles.csproj.GenerateResource.Cache
 C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\obj\Debug\Tiaan_Rectangles.csproj.CoreCompileInputs.cache
 C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\obj\Debug\Tiaan_Rectangles.exe
 C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\obj\Debug\Tiaan_Rectangles.pdb
+C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\obj\Debug\Tiaan_Rectangles.MainApplication.resources
+C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\bin\Debug\Newtonsoft.Json.dll
+C:\Assessment\Tiaan-Auto\Tiaan_Rectangles\Tiaan_Rectangles\bin\Debug\Newtonsoft.Json.xml
