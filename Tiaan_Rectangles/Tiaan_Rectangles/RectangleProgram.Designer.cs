@@ -33,7 +33,8 @@
       this.UserInputNumericDropdown = new System.Windows.Forms.NumericUpDown();
       this.label2 = new System.Windows.Forms.Label();
       this.AmountChosenLabel = new System.Windows.Forms.Label();
-      this.canvas = new System.Windows.Forms.Panel();
+      this.canvasInput = new System.Windows.Forms.Panel();
+      this.canvasOutput = new System.Windows.Forms.Panel();
       ((System.ComponentModel.ISupportInitialize)(this.UserInputNumericDropdown)).BeginInit();
       this.SuspendLayout();
       // 
@@ -96,20 +97,28 @@
       this.AmountChosenLabel.Text = "Amount";
       this.AmountChosenLabel.Visible = false;
       // 
-      // canvas
+      // canvasInput
       // 
-      this.canvas.Location = new System.Drawing.Point(418, 152);
-      this.canvas.Name = "canvas";
-      this.canvas.Size = new System.Drawing.Size(531, 348);
-      this.canvas.TabIndex = 9;
-      this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.canvas_Paint);
+      this.canvasInput.Location = new System.Drawing.Point(12, 153);
+      this.canvasInput.Name = "canvasInput";
+      this.canvasInput.Size = new System.Drawing.Size(500, 400);
+      this.canvasInput.TabIndex = 9;
+      this.canvasInput.Paint += new System.Windows.Forms.PaintEventHandler(this.Canvas_Paint);
+      // 
+      // canvasOutput
+      // 
+      this.canvasOutput.Location = new System.Drawing.Point(518, 153);
+      this.canvasOutput.Name = "canvasOutput";
+      this.canvasOutput.Size = new System.Drawing.Size(500, 400);
+      this.canvasOutput.TabIndex = 10;
       // 
       // MainApplication
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(1012, 580);
-      this.Controls.Add(this.canvas);
+      this.ClientSize = new System.Drawing.Size(1030, 583);
+      this.Controls.Add(this.canvasOutput);
+      this.Controls.Add(this.canvasInput);
       this.Controls.Add(this.AmountChosenLabel);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.UserInputNumericDropdown);
@@ -131,7 +140,8 @@
     private System.Windows.Forms.NumericUpDown UserInputNumericDropdown;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label AmountChosenLabel;
-    private System.Windows.Forms.Panel canvas;
+    private System.Windows.Forms.Panel canvasInput;
+    private System.Windows.Forms.Panel canvasOutput;
   }
 }
 
