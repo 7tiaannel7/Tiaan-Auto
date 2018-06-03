@@ -1,34 +1,51 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
+using System.Runtime.Remoting.Messaging;
+using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace Tiaan_Rectangles
 {
-  internal class InputRectangles
+  public class InputRectangles
   {
     private const string InputRectsFile = "InputRectangles.json";
 
-    public void DeterminInputRectangles(decimal amountOfRectangles)
+    public void DeterminInputRectangles(decimal amountOfRectangles, Panel canvasInput)
     {
       var x = 0;
-      int canvasHight = 300;
-      int canvasWidth = 400;
-      int rectMaxHight = Convert.ToInt32(canvasHight / amountOfRectangles);
-      int rectMaxWidth = Convert.ToInt32(canvasWidth / amountOfRectangles);
+      const int canvasHeight = 400;
+      const int canvasWidth = 500;
+      var rectBoundry = Convert.ToInt32(canvasWidth / amountOfRectangles);
 
-      
       var rectangles = new List<Rectangle>();
 
       for (var i = 0; i < amountOfRectangles; i++)
       {
-        int width = RandomNumber(rectMaxWidth);
-        int height = RandomNumber(rectMaxHight);
-        int y = canvasHight - height;
+        var width = RandomNumber(rectBoundry);
+        var height = RandomNumber(canvasHeight);
+        var y = canvasHeight - height;
 
-        //validate W & H is not 0
+        if(width == 0)
+        {
+          while (width == 0)
+          {
+            width = RandomNumber(rectBoundry);
+          }
+        }
+
+        if (height == 0)
+        {
+          while (height == 0)
+          {
+            height = RandomNumber(canvasHeight);
+          }
+        }
+        
 
         rectangles.Add(new Rectangle
         {
@@ -41,14 +58,11 @@ namespace Tiaan_Rectangles
         x = x + width;
       }
       WriteInputFile(rectangles);
-      //ReadInputFile();
-      DrawInputRects();
+      ReadInputFile(); 
+      DrawInputRects(rectangles, canvasInput);
     }
 
-    private void DrawInputRects()
-    {
-      
-    }
+
 
     private static void WriteInputFile(List<Rectangle> rectangles)
     {
@@ -60,24 +74,32 @@ namespace Tiaan_Rectangles
       }
     }
 
-    private static void ReadInputFile()
+    public static List<Rectangle> ReadInputFile()
     {
-      string readResult = string.Empty;
-      using (StreamReader r = new StreamReader(InputRectsFile))
-      {
-        var json = r.ReadToEnd();
-        var jobj = JObject.Parse(json);
-        readResult = jobj.ToString();
-      }
+        List<Rectangle> rects;
+
+        using (var r = new StreamReader(InputRectsFile))
+        {
+          var json = r.ReadToEnd();
+          rects = JsonConvert.DeserializeObject<List<Rectangle>>(json);
+        }
+        return rects;
     }
 
-    private static readonly Random random1 = new Random();
-    private static readonly object syncLock = new object();
+    private static void DrawInputRects(List<Rectangle> rectangleCoordinates, Panel canvas)
+    {
+      var draw = new Drawing();
+      draw.DrawShit(rectangleCoordinates, canvas);
+    }
+
+    private static readonly Random RandomT = new Random();
+    private static readonly object SyncLock = new object();
     public static int RandomNumber(int max)
     {
-      lock (syncLock)
-      { // synchronize
-        return random1.Next(max);
+      lock (SyncLock)
+      { 
+        // synchronize
+        return RandomT.Next(max);
       }
     }
   }

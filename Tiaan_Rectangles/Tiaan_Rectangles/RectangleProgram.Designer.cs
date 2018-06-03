@@ -103,7 +103,6 @@
       this.canvasInput.Name = "canvasInput";
       this.canvasInput.Size = new System.Drawing.Size(500, 400);
       this.canvasInput.TabIndex = 9;
-      this.canvasInput.Paint += new System.Windows.Forms.PaintEventHandler(this.Canvas_Paint);
       // 
       // canvasOutput
       // 
