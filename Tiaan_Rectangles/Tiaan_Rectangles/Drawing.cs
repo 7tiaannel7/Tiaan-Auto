@@ -11,15 +11,15 @@ namespace Tiaan_Rectangles
   public class Drawing
   {
 
-    public  void DrawShit(List<Rectangle> rectangleCoordinates, Panel canvas)
+    public  void DrawRectangles(List<Rectangle> rectangleCoordinates, Panel canvas)
     {
       canvas.Refresh();
-      Graphics gObject = canvas.CreateGraphics();
-      Pen colorPen = new Pen(Color.Blue, 2);
+      var gObject = canvas.CreateGraphics();
+      var colorPen = new Pen(Color.Red, 2);
 
-      for (var i = 0; i < rectangleCoordinates.Count; i++)
+      foreach (var rect in rectangleCoordinates)
       {
-        gObject.DrawRectangle(colorPen, rectangleCoordinates[i].X, rectangleCoordinates[i].Y, rectangleCoordinates[i].Width, rectangleCoordinates[i].Height);
+        gObject.DrawRectangle(colorPen, rect.X, rect.Y, rect.Width, rect.Height);
       }
 
     }

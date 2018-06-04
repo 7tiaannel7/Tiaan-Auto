@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drawing.cs" />
+    <Compile Include="OutputRectangles.cs" />
     <Compile Include="RectangleProgram.cs">
       <SubType>Form</SubType>
     </Compile>

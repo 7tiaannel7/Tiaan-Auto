@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO.IsolatedStorage;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tiaan_Rectangles
@@ -26,11 +18,18 @@ namespace Tiaan_Rectangles
     public void GenerateButton_Click(object sender, EventArgs e)
     {
       var amountOfRectangles = UserInputNumericDropdown.Value;
-      AmountChosenLabel.Text = "You chose " + amountOfRectangles + " rectangles!";
+      AmountChosenLabel.Text = @"You chose " + amountOfRectangles + @" rectangles!";
       AmountChosenLabel.Visible = true;
  
       var input = new InputRectangles();
       input.DeterminInputRectangles(amountOfRectangles, canvasInput);
+
+      //Commenting out below as this is incomplete, so the application can still run and not be stuck in a loop. 
+
+      /*
+      var output = new OutputRectangles();
+      output.DeterminOutputRectangles(canvasOutput);
+      */
     }
   }
 }

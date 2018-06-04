@@ -1,13 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
-using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Tiaan_Rectangles
 {
@@ -89,7 +85,7 @@ namespace Tiaan_Rectangles
     private static void DrawInputRects(List<Rectangle> rectangleCoordinates, Panel canvas)
     {
       var draw = new Drawing();
-      draw.DrawShit(rectangleCoordinates, canvas);
+      draw.DrawRectangles(rectangleCoordinates, canvas);
     }
 
     private static readonly Random RandomT = new Random();
